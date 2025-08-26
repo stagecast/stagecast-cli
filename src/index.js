@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import { Command } from 'commander';
-import { loadLoginCommand, loadActivationCommands } from '#commands/index.js';
+import { loadLoginCommand, loadActivationCommands, loadLoadCommand } from '#commands/index.js';
 import packageJson from '../package.json' with { type: 'json' };
 
 const program = new Command();
@@ -11,6 +11,7 @@ program
   .description(packageJson.description)
   .version(packageJson.version, '-V, --version', 'output the current version');
 
+loadLoadCommand(program)
 loadLoginCommand(program)
 loadActivationCommands(program)
 
