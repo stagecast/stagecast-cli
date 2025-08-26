@@ -7,6 +7,7 @@ export const loadAction = async () => {
   
   console.log(chalk.cyan('\nFor general help, use:'));
   console.log(chalk.white('  stagecast-cli --help'));
+  console.log(chalk.white('  stagecast-cli activation --help'));
   console.log(chalk.cyan(''));
 }
 
