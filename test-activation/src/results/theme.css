@@ -1,0 +1,79 @@
+/* Approach 1: We have a fixed set of customisable variable. */
+
+:root, [theme="light"] {
+
+  --custom-dark: #171717;
+  --white: #FFFFFF;
+
+  --bg-light-0: var(--white);
+  --bg-light-1: rgba(255, 255, 255, 0.9);
+  --bg-light-2: rgba(255, 255, 255, 0.8);
+  --bg-light-3: rgba(255, 255, 255, 0.7);
+  --bg-light-4: rgba(255, 255, 255, 0.6);
+  --bg-light-5: rgba(255, 255, 255, 0.5);
+  --bg-light-6: rgba(255, 255, 255, 0.4);
+  --bg-light-7: rgba(255, 255, 255, 0.3);
+  --bg-light-8: rgba(255, 255, 255, 0.2);
+  --bg-light-9: rgba(255, 255, 255, 0.1);
+  --bg-light-10: rgba(255, 255, 255, 0.05);
+
+  --bg-dark-0: var(--custom-dark);
+  --bg-dark-1: rgba(23, 23, 23, 0.9);
+  --bg-dark-2: rgba(23, 23, 23, 0.8);
+  --bg-dark-3: rgba(23, 23, 23, 0.7);
+  --bg-dark-4: rgba(23, 23, 23, 0.6);
+  --bg-dark-5: rgba(23, 23, 23, 0.5);
+  --bg-dark-6: rgba(23, 23, 23, 0.4);
+  --bg-dark-7: rgba(23, 23, 23, 0.3);
+  --bg-dark-8: rgba(23, 23, 23, 0.2);
+  --bg-dark-9: rgba(23, 23, 23, 0.1);
+  --bg-dark-10: rgba(23, 23, 23, 0.05);
+
+  /* fonts */
+  --header-font: var(--font-family);
+  --body-font: var(--font-family);
+  /* backgrounds */
+  --bg-color-1: #503AF2;
+  --bg-color-2: var(--white);
+  --bg-color-3: var(--bg-dark-10);
+  --bg-color-4: var();
+  /* text colors */
+  --text-color-1: var(--custom-dark);
+  --text-color-2: var(--custom-dark);
+  --text-color-3: var();
+  --text-color-4: var();
+  /* interactive elements colors (checkbox, buttons, inputs) */
+  --input-color-1: var();
+  --input-color-2: #ea11ad;
+  --input-color-3: #ac3af2;
+  --input-color-4: var();
+  /* input text colors */
+  --input-text-color-1: var(--white);
+  --input-text-color-2: var();
+  --input-text-color-3: var();
+  --input-text-color-4: var();
+}
+
+
+[theme="light"]  {
+  --bg-color-2: var(--white);
+  --bg-color-3: var(--bg-dark-10);
+  --bg-color-4: var(--white);
+  
+  --text-color-1: var(--custom-dark); 
+  --text-color-2: var(--bg-dark-5); 
+
+  --user-icon: url(./assets/user-icon-black.svg);
+}
+
+[theme="dark"]  {
+  --bg-color-2: var(--custom-dark);
+  --bg-color-3: var(--bg-light-10);
+  --bg-color-4: var(--bg-light-8);
+  
+  --text-color-1: var(--white);
+  --text-color-2: var(--bg-light-5); 
+
+  --user-icon: url(./assets/user-icon-white.svg);
+
+}

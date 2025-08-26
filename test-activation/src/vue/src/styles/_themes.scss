@@ -1,0 +1,45 @@
+@import './variables';
+
+[theme="light"], :root {
+  --bg-color-2: #{$white};
+  --bg-color-2-inverted: #{$custom-dark};
+  --bg-color-3: #{$dark-10};
+  --bg-color-4: #{$dark-9};
+  --bg-color-5: #{$full-light-grey};
+  --text-color-1: #{$custom-dark};
+  --text-color-1-inverted: #{$white};
+  --text-color-2: #{$dark-5};
+
+  --btn-color-1: #{$custom-dark};
+  --btn-text-color-1: #{$white};
+
+  --input-color-1: #{$dark-9};
+  --input-color-2: #{$dark-5};
+  --input-text-color-1: #{$custom-dark};
+  --list-style-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxNiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik0xNS40OTUgNi40OTQ5N0MxNS43NjgzIDYuMjIxNjEgMTUuNzY4MyA1Ljc3ODM5IDE1LjQ5NSA1LjUwNTAzTDExLjA0MDIgMS4wNTAyNUMxMC43NjY4IDAuNzc2ODg2IDEwLjMyMzYgMC43NzY4ODYgMTAuMDUwMyAxLjA1MDI1QzkuNzc2ODkgMS4zMjM2MiA5Ljc3Njg5IDEuNzY2ODQgMTAuMDUwMyAyLjA0MDJMMTQuMDEwMSA2TDEwLjA1MDMgOS45NTk4QzkuNzc2ODkgMTAuMjMzMiA5Ljc3Njg5IDEwLjY3NjQgMTAuMDUwMyAxMC45NDk3QzEwLjMyMzYgMTEuMjIzMSAxMC43NjY4IDExLjIyMzEgMTEuMDQwMiAxMC45NDk3TDE1LjQ5NSA2LjQ5NDk3Wk0wIDYuN0gxNVY1LjNIMFY2LjdaIiBmaWxsPSJibGFjayIvPg0KPC9zdmc+DQo=);
+
+  --brightness: 20%;
+}
+
+[theme="dark"] {
+  --bg-color-2: #{$custom-dark};
+  --bg-color-2-inverted: #{$white};
+  --bg-color-3: #{$light-10};
+  --bg-color-4: #{$light-9};
+  --bg-color-5: #{$full-dark-grey};
+
+  --text-color-1: #{$white};
+  --text-color-1-inverted: #{$custom-dark};
+  --text-color-2: #{$light-5};
+
+  --btn-color-1: #{$white};
+  --btn-text-color-1: #{$custom-dark};
+
+  --input-color-1: #{$light-9};
+  --input-color-2: #{$light-5};
+  --input-text-color-1: #{$white};
+
+  --list-style-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxNiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik0xNS40OTUgNi40OTQ5N0MxNS43NjgzIDYuMjIxNjEgMTUuNzY4MyA1Ljc3ODM5IDE1LjQ5NSA1LjUwNTAzTDExLjA0MDIgMS4wNTAyNUMxMC43NjY4IDAuNzc2ODg2IDEwLjMyMzYgMC43NzY4ODYgMTAuMDUwMyAxLjA1MDI1QzkuNzc2ODkgMS4zMjM2MiA5Ljc3Njg5IDEuNzY2ODQgMTAuMDUwMyAyLjA0MDJMMTQuMDEwMSA2TDEwLjA1MDMgOS45NTk4QzkuNzc2ODkgMTAuMjMzMiA5Ljc3Njg5IDEwLjY3NjQgMTAuMDUwMyAxMC45NDk3QzEwLjMyMzYgMTEuMjIzMSAxMC43NjY4IDExLjIyMzEgMTEuMDQwMiAxMC45NDk3TDE1LjQ5NSA2LjQ5NDk3Wk0wIDYuN0gxNVY1LjNIMFY2LjdaIiBmaWxsPSJ3aGl0ZSIvPg0KPC9zdmc+DQo=);
+  
+  --brightness: 200%;
+} 

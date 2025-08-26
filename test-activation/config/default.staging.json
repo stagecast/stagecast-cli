@@ -1,0 +1,18 @@
+{
+  "branding": {
+    "onboardingHeaderImage": [],
+    "resultsBackgroundImage": [],
+    "backgroundImage": [],
+    "backgroundColor": "#7A85FF",
+    "theme": "light"
+  },
+  "quest": {
+    "challenges": []
+  },
+  "custom": {
+    "gameButtonImage": [],
+    "resultText": "Play the Speed Challenge!",
+    "enableLeaderboard": true,
+    "enableTotalParticipantsCounter": false
+  }
+}

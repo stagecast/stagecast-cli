@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!-- Use this file to test your Moment -->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <title>Whack a Mole Mobile</title>
+    <link rel="stylesheet" href="./adapter.css">
+</head>
+<body>
+<!-- iframe where the treasure hunt moment will be loaded. -->
+<script>
+
+const roomId = '90E1D614-34FB-49F0-9E7E-854CF1BD470C'
+     const activationMessage = ''
+     const roomConfig = {"presentation":{"activationMessage":"Go to www.stagecast.io and type the code $ROOM_CODE.","showMessage":true,"logos":[]},"join":{"background":"","header":"","title":"Welcome to “Test test test”!","description":"Stay tuned for upcoming activities. As soon as the host starts an activity you will be able to participate here.","theme":"dark"}}
+     const activationId = 'D768CBBA-99D2-4DDE-8901-4CE1B5404EBB'
+     const environment = 'k8staging'
+     const code = '5892'
+     const userId = '9xlDrTcwlLJMrMW5nmifT4y1RLGTOVENuWoQ'
+     const participantId = 'p_90C192EE-E093-4B42-9574-FB361C8D3481'
+     const activationConfig = {"sponsor":{"logos":["https://d1r0op4ur44djw.cloudfront.net/api/content/8545628B-7A15-48C2-AC49-9367CE91F366","https://d1r0op4ur44djw.cloudfront.net/api/content/8545628B-7A15-48C2-AC49-9367CE91F366","https://d1r0op4ur44djw.cloudfront.net/api/content/8545628B-7A15-48C2-AC49-9367CE91F366","https://d1r0op4ur44djw.cloudfront.net/api/content/8545628B-7A15-48C2-AC49-9367CE91F366"],"credit":"Presented by:","color":["#7a85ffff"]},"icons":["https://d1r0op4ur44djw.cloudfront.net/bundles/com.stagecast.whack-a-mole/3.0.0-pre.1/assets/whack-a-mole.250x150.jpg"],"bundleId":"com.stagecast.whack-a-mole","screens":{"stage":"optional","mobile":"mandatory"},"showSponsor":true,"shareUrl":"https://join.staging.stagecast.io?5892","custom":{"gameButtonImage":["https://d1r0op4ur44djw.cloudfront.net/api/content/27E5DADE-B3FE-48F0-892B-9B6BF9BD0CC4"],"resultText":"Play the Speed Challenge!"},"language":"en","branding":{"theme":"light","backgroundColor":["#7a85ff"]},"showCta":true,"plugins":["sponsor","cta","quest","prize"],"showPrize":true,"prize":{"enoughPointsPercentage":0,"prizeAvailabilityLimit":2,"type":"prizeOnTopRanking","headline":"Win an amazing prize!","description":"Participate in the activity and get a chance to win the prize","picture":"https://console.staging.stagecast.io/media/assets/prize/prize-header.jpg","fulfillment":{"type":"website-visits","headline":"Congratulations you have won a prize!","description":"You are one of the lucky winners. Make sure to claim your well deserved prize below.","picture":"https://console.staging.stagecast.io/media/assets/prize/prize-header-winner.jpg","config":{"claimLabel":"Claim Prize","termsLinkTitle":"","termsLabel":"","termsUrl":"","nameInput":"","emailInput":"","submitMessage":""}}},"quest":{"title":"Whack a Mole","type":"simple","seriesDuration":300000,"challengeDuration":30000,"challengesPerRound":1,"maxRoundsPerSeries":0,"maxSeries":12,"moderated":false,"challengesCount":0},"cta":{"custom":{"buttonLabel":"Go to Website","buttonLink":"https://stagecast.io"},"description":"We offer a new item in our shop for sale. Make sure to check it out.","header":["https://console.staging.stagecast.io/media/assets/cta/website-visits.png"],"headline":"Check this out!","showOnce":false,"type":"website"}}
+     const bundleLocation = 'https://d1r0op4ur44djw.cloudfront.net/bundles/com.stagecast.whack-a-mole/3.0.0-pre.1'
+     const deviceId = '9xlDrTcwlLJMrMW5nmifT4y1RLGTOVENuWoQ'
+     const shouldLog = true
+     const host = 'console.staging.stagecast.io'
+     const cdnHost = 'd1r0op4ur44djw.cloudfront.net'
+     const webSocketHost = 'console.staging.stagecast.io'
+     const analyticsHost = 'analytics.staging.stagecast.io'
+     const hosts = {host, cdnHost, analyticsHost, webSocketHost}
+
+     window.onload = onResize;
+     window.onresize = onResize;
+     function onResize() {
+       let vh = window.innerHeight * 0.01;
+       document.documentElement.style.setProperty('--vh', vh + 'px');
+     }
+
+     function iframeLoaded(){
+       document.getElementById('frame').contentWindow.postMessage({
+         messageSource: 'STAGECAST_SDK',
+         config: {
+           environment: environment,
+           hosts: hosts,
+           userId: userId,
+           participantId: participantId,
+           token: 'eyJhbGciOiJIUzI1NiJ9.eyJhY3QiOiJENzY4Q0JCQS05OUQyLTREREUtODkwMS00Q0UxQjU0MDRFQkIiLCJhdWQiOlsiY29uc29sZSJdLCJleHAiOjE2MjUyNTc0NjcsImlzcyI6InN0Z2NzdCIsInN1YiI6Ijl4bERyVGN3bExKTXJNVzVubWlmVDR5MVJMR1RPVkVOdVdvUSIsInV0IjoiYWN0aXZhdGlvbiJ9.4VGgKF7Wlg1GknEn21Dl8vzG5ulUXaPu9DgXHuhEFgQ',
+           activationId: activationId,
+           activationConfig: activationConfig,
+           roomConfig: roomConfig,
+           activeChangeTime: 1625171042809,
+           badgeStatus: 'enabled',
+           roomId: roomId,
+           disableLogs: !shouldLog,
+         }
+       }, '*');
+     }
+    
+</script>
+<iframe id="frame" title="Whack a Mole" onload="iframeLoaded()" src="http://localhost:8080/"></iframe>
+<!-- <iframe id="frame" title="Voting" onload="iframeLoaded()" src="../../mobile/index.html"></iframe> -->
+<!-- <script src="./test-data.js"></script>
+<script src="./loader.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,33 @@
+[{
+  "wrappers": [
+    "group-box"
+  ],
+  "templateOptions": {
+    "wrapperTitle": "Game Settings"
+  },
+  "fieldGroup": [{
+    "key": "enableLeaderboard",
+    "defaultValue": true,
+    "type": "switch-input",
+    "wrappers": ["form-field", "focus-component"],
+    "templateOptions": {
+      "label": "Enable Leaderboard",
+      "component": "quest:leaderboard",
+      "formCheck": "nolabel",
+      "description": "Users will be able to see scores of other participants."
+    }
+  },{
+    "key": "gameButtonImage",
+    "type": "image-input",
+    "defaultValue": [],
+    "wrappers": ["form-field", "focus-component"],
+    "templateOptions": {
+      "component": "quest:challenge",
+      "label": "Custom Image",
+      "multiple": false,
+      "deleteImg": false,
+      "maxFiles": 1,
+      "id": "custom-img-uploader"
+    }
+  }]
+}]

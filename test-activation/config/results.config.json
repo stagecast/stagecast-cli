@@ -1,0 +1,22 @@
+[
+  {
+    "wrappers": ["group-box"],
+    "templateOptions": {
+      "wrapperTitle": "Leaderboard Settings"
+    },
+    "fieldGroup": [
+      {
+        "key": "enableTotalParticipantsCounter",
+        "defaultValue": false,
+        "type": "switch-input",
+        "wrappers": ["form-field", "focus-component"],
+        "templateOptions": {
+          "label": "Enable Leaderboard Counter",
+          "component": "quest:leaderboard",
+          "formCheck": "nolabel",
+          "description": "Users will see how many active participants are live on the leaderboard."
+        }
+      }
+    ]
+  }
+]

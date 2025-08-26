@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap');
+@import "~normalize.css/normalize.css";
+@import "styles/variables";
+@import 'styles/themes';
+
+.border-top-radius {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.pb-10 {
+  padding-bottom: 10px;
+}
+
+.text {
+  line-height: 20px;
+  font-size: 16px;
+  font-weight: $font-weight-normal;
+  &.bold {
+    font-weight: $font-weight-bold;
+  }
+}
+
+.large-text {
+  line-height: 20px;
+  font-size: 18px;
+  font-weight: $font-weight-normal;
+  &.bold {
+    font-weight: $font-weight-bold;
+  }
+}
+
+.text-bold {
+  font-weight: $font-weight-bold!important;
+}
+
+.text-grey {
+  color: var(--text-color-2);
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+.bg-grey {
+  background-color: var(--bg-color-3);
+}
+
+.box {
+  background-color: var(--bg-color-2);
+  color: var(--text-color-1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255,255,255,0.1);  
+  border-radius: 10px;
+  margin: 16px 0px;
+
+  &.nopadding {
+    padding: 0px 20px;
+  }
+
+  .box-title {
+    text-align: center;
+    font-size: 22px;
+    padding: 16px;
+    margin: 0;
+
+    span {
+      font-weight: $font-weight-normal;
+    }
+    
+    .box-title-sub {
+      opacity: 0.5;
+    }
+  }
+
+  .info-row {
+    display: block;
+    padding: 0px 20px 10px 20px;
+
+    .right-info {
+      float: right;
+      font-weight: $font-weight-bold;
+    }
+  }
+}
+
+.green-text {
+  color: #34BE7E;
+}
+
+.live-indicator {
+  color: #34BE7E;  
+  display: inline-block;
+  font-size: 13px;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  
+  .blink {
+    display: inline-block;
+    animation: blinker 1s cubic-bezier(0.5, 0, 1, 1) infinite alternate;
+    background: #34BE7E;
+    border-radius: 50%;
+    height: 8px;
+    width: 8px;
+    margin-right: 5px;
+  }
+}
+
+@keyframes blinker {
+  from { opacity: 1; transform: scale(1.1); }
+  to { opacity: 0; transform: scale(0.9); }
+}

@@ -1,0 +1,2 @@
+export const getNameFromManifest = (activationManifest) => activationManifest.template.name.split(' ').join('_');
+export const getBundleIdFormManifest = (activationManifest) => `${activationManifest.bundleId}@${activationManifest.version}`

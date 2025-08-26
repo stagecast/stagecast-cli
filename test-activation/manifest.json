@@ -1,0 +1,137 @@
+{
+  "bundleId": "com.stagecast.test-activation",
+  "version": "1.0.2",
+  "category": "crowd game",
+  "description": "The faster participants click the images, the more points they collect. Participants are ranked in a leaderboard.",
+  "tags": [
+    "speed",
+    "challenge",
+    "whack a mole",
+    "interaction",
+    "games",
+    "challenges",
+    "leaderboard",
+    "click games",
+    "tap games",
+    "prizes"
+  ],
+  "template": {
+    "name": "test activation",
+    "displayName": "Test Activation",
+    "defaultMessage": "",
+    "labels": [],
+    "icons": {
+      "sm": {
+        "size": "sm",
+        "path": "/assets/whack-a-mole.250x150.jpg",
+        "name": "whack-a-mole.250x150.jpg",
+        "type": "image/jpg"
+      },
+      "md": {
+        "size": "md",
+        "path": "/assets/whack-a-mole.500x300.jpg",
+        "name": "whack-a-mole.500x300.jpg",
+        "type": "image/jpg"
+      },
+      "lg": {
+        "size": "lg",
+        "path": "/assets/whack-a-mole.1000x600.jpg",
+        "name": "whack-a-mole.1000x600.jpg",
+        "type": "image/jpg"
+      }
+    },
+    "presentation": {
+      "screenshots": [],
+      "cover": "",
+      "body": "<h2>What the activation does</h2><p>A leaderboard speed-clicking game where the fastest participant receives a prize.</p><h2>How to use the activation at your event</h2><p>Use the Whack a Mole to activate your audience before, during or after events with a fun game!</p>"
+    },
+    "plugins": ["sponsor", "cta", "quest", "prize"],
+    "features": ["leaderboard"],
+    "branding": {
+      "theming": true,
+      "defaultTheme": "light"
+    },
+    "screens": {
+      "mobile": "mandatory",
+      "stage": "optional"
+    },
+    "general": {
+      "hasModeration": false,
+      "hasPreview": true,
+      "hasLiveControls": false,
+      "hasControls": false,
+      "previews": {
+        "mobile": {
+          "type": "component",
+          "location": "./src/previews/mobile/index.html"
+        }
+      },
+      "supportedLanguages": ["en", "sv", "de", "it", "da", "ru", "es", "fr"]
+    },
+    "provider": {
+      "developer": "Stagecast AB",
+      "org": "Stagecast AB",
+      "support": "support@stagecast.se"
+    },
+    "quest": {
+      "type": "simple",
+      "nameMap": {
+        "challengeName": "",
+        "challengeGroupName": "",
+        "questName": "Whack a Mole"
+      },
+      "config": {
+        "title": "Whack a Mole",
+        "type": "simple",
+        "scoreFunction": "",
+        "challengesCount": 1,
+        "maxSeries": {
+          "value": 1,
+          "hidden": false,
+          "required": true,
+          "label": "Number of Leaderboard Rounds",
+          "description": "Select the number of leaderboard rounds. When the leaderboard round countdown runs out a new round begins."
+        },
+        "enableMaxRoundsPerSeries": {
+          "value": false,
+          "hidden": false,
+          "label": "Limit Quiz Replays",
+          "description": "Activate this option to limit the number of games a participant can play within a round."
+        },
+        "maxRoundsPerSeries": {
+          "value": 0,
+          "hidden": false,
+          "required": true,
+          "label": "Maximum Games to be Played",
+          "description": "",
+          "help": "Set the number of tries a user has to replay this activation."
+        },
+        "seriesDuration": {
+          "value": 3600000,
+          "hidden": false,
+          "required": true,
+          "label": "Leaderboard Round Countdown",
+          "description": "",
+          "help": "When the countdown ends, the leaderboard of this particular round freezes. Participants can no longer play in this round. If you have selected multiple leaderboard rounds a new round will start with a new leaderboard. If you add a prize with the win criterium \"Top Ranking\n to this activation, the winners are picked when the countdown ends."
+        },
+        "challengesPerRound": {
+          "value": 1,
+          "hidden": true,
+          "required": true
+        },
+        "challengeDuration": {
+          "value": 30000,
+          "hidden": false,
+          "required": true,
+          "label": "Game Duration",
+          "description": "Select the time a user has to play the game."
+        },
+        "config": {
+          "value": {},
+          "hidden": true
+        }
+      },
+      "winCriteria": ["prizeOnTopRanking", "prizeOnEnoughPoints"]
+    }
+  }
+}

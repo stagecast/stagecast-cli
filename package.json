@@ -1,0 +1,29 @@
+{
+  "name": "stagecast-cli",
+  "version": "1.0.0",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "stagecast-cli": "./src/index.js"
+  },
+  "type": "module",
+  "imports": {
+    "#utils/*": "./src/utils/*",
+    "#commands/*": "./src/commands/*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Utility tool for stagecast activations and more.",
+  "dependencies": {
+    "archiver": "^7.0.1",
+    "axios": "^1.7.9",
+    "commander": "^13.1.0",
+    "inquirer": "^12.4.1",
+    "ncp": "^2.0.0",
+    "node-cache": "^5.1.2",
+    "rimraf": "^6.0.1"
+  }
+}
